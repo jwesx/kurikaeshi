@@ -12,6 +12,7 @@ from keep_alive import keep_alive
 
 from commands.hello import hello
 from commands.activate_clear_message import activate_clear_message
+from commands.random import randomInt
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -33,6 +34,9 @@ async def on_message(message):
 
     if message.content.startswith('.!clear'):
         await activate_clear_message(message, message.author)
+    
+    if message.content.startswith('.!random'):
+        await randomInt(int(message.content.split()[1]), int(message.content.split()[2]))
 
 
 keep_alive()
