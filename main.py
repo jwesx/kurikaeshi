@@ -1,15 +1,17 @@
 # This code is based on the following example:
 # https://discordpy.readthedocs.io/en/stable/quickstart.html#a-minimal-bot
 
+from logging import ERROR
 import os
 
 import discord
 import asyncio
 
+from commands.activate_clear_message import activate_clear_message
 from keep_alive import keep_alive
 
 from commands.hello import hello
-from commands.clear_messages import clear_messages
+from commands.activate_clear_message import activate_clear_message
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -30,17 +32,7 @@ async def on_message(message):
     await hello(message, client)
 
     if message.content.startswith('.!clear'):
-        try:
-            await clear_messages(message, int(message.content.split()[1]))
-        except:
-            await message.channel.send("Quantas? Tem que dizer, fella...",
-                                       delete_after=5)
-            await asyncio.sleep(0.5)
-            await message.channel.send(
-                "Ou então tu mandou errado, é .!clear <quantidade> ← em número! 😡",
-                delete_after=5)
-            await asyncio.sleep(4)
-            await message.delete()
+        await activate_clear_message(message, message.author)
 
 
 keep_alive()
