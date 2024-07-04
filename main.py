@@ -29,6 +29,7 @@ async def on_message(message):
 
     await hello(message, client)
 
+    @haspermissions(manage_messages==true)
     if message.content.startswith('.!clear'):
         try:
             await clear_messages(message, int(message.content.split()[1]))
