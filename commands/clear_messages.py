@@ -1,6 +1,10 @@
-async def clear_messages(message, amount):
-    if message.content.startswith('.!clear'):
-        await message.channel.send(f"Deletando {amount} mensagens...", delete_after=5)
+from discord.ext.commands import has_permissions, CheckFailure
 
-        for i in amount:
-            await message.delete()
+
+@has_permissions(manage_messages=True)
+async def clear_messages(message, amount):
+  await message.channel.send(f"Deletando {amount} mensagens...",
+                             delete_after=5)
+
+  for i in amount:
+    await message.delete()
