@@ -34,9 +34,9 @@ async def on_message(message):
 
     if message.content.startswith('.!clear'):
         await activate_clear_message(message, message.author)
-    
+
     if message.content.startswith('.!random'):
-        await randomInt(int(message.content.split()[1]), int(message.content.split()[2]))
+        await randomInt(message)
 
 
 keep_alive()
