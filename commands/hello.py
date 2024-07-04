@@ -3,12 +3,30 @@ import random
 import discord
 
 responses = [
-  "E aí!", "Fala!", "Oi, tudo sussa?", "Salve!", "Tudo em cima?", "Tranquilo?", "Aê!",
-  "E aí, brother!", "Fala, galera!", "Como tá?", "O que de novo?", "Blz?",
-  "De boa?", "Rolando tudo?", "Como vai a vida?",
-  "Tudo em ordem?", "Tudo sussa?", "Tudo tranquilo?",
-  "O que tá acontecendo?", "E o PodPah?", "Pega a visão: meu pau na sua mão",
-  "Viu Twitter hoje?", "Precisa de mim?", "PING! PONG!"
+  "E aí!",
+  "Fala!",
+  "Oi, tudo sussa?",
+  "Salve!", 
+  "Tudo em cima?", 
+  "Tranquilo?", 
+  "Aê!",
+  "E aí, brother!", 
+  "Fala, galera!", 
+  "Como tá?", 
+  "O que de novo?", 
+  "Blz?",
+  "De boa?", 
+  "Rolando tudo?", 
+  "Como vai a vida?",
+  "Tudo em ordem?", 
+  "Tudo sussa?", 
+  "Tudo tranquilo?",
+  "O que tá acontecendo?", 
+  "E o PodPah?", 
+  "Pega a visão: meu pau na sua mão",
+  "Viu Twitter hoje?", 
+  "Precisa de mim?", 
+  "PING! PONG!"
 ]
 
 
