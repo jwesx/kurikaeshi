@@ -6,6 +6,9 @@ async def guessing_number_game(client, message):
   secret_number = random.randint(1, n)
   await message.channel.send('Guess the number!')
 
+  if n is None:
+    n = 100
+
   def check(m):
     return m.author == message.author and m.channel == message.channel
 
