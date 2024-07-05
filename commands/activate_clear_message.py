@@ -21,7 +21,6 @@ async def activate_clear_message(message, client):
     except (IndexError, ValueError):
       await message.channel.send("Quantas? Tem que dizer, fella...",
                                  delete_after=5)
-      await asyncio.sleep(0.5)
       await message.channel.send(
           "Ou então tu mandou errado, é .!clear <quantidade> ← em número! 😡",
           delete_after=5)
