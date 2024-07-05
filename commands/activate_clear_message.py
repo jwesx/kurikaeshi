@@ -2,7 +2,10 @@ import asyncio
 
 from discord import Member
 from discord.ext.commands import has_permissions, MissingPermissions
-from commands.clear_messages import clear_messages
+
+async def clear_messages(message, amount):
+  await message.delete()
+  await message.channel.purge(limit=amount)
 
 
 async def activate_clear_message(message, client):

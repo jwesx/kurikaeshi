@@ -13,7 +13,9 @@ async def helpMessage(message):
         +
         "**• .!dm** <@user> <mensagem> → envio uma mensagem direta para a pessoa.\n"
         +
-        "**• .!guessnumber** {number} → jogue um jogo de adivinhar o número! Fique atento ao que eu mandar após sua tentativa.\n\n"
+        "**• .!guessnumber** {number} → jogue um jogo de adivinhar o número! Fique atento ao que eu mandar após sua tentativa.\n"
+        +
+        "**• .!giverole** <@user> <@role> → dá um cargo para a pessoa (mas não ta funcionando 😭)\n\n"
         +
         "Para melhor compreensão desse comando, os que estiverem entre <> são obrigatórios, e entre {} é opcional."
     )

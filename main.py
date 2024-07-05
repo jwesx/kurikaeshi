@@ -38,7 +38,7 @@ async def on_message(message):
     await hello(message, client)
 
     if message.content.startswith('.!giverole'):
-        await give_role(message, message.content.split()[1], client)
+        await give_role(message, client)
 
     if message.content.startswith('.!guessnumber'):
         await guessing_number_game(client, message)
@@ -46,7 +46,7 @@ async def on_message(message):
     if message.content.startswith('.!dm'):
         _, user_id, *msg_parts = message.content.split()
         msg_content = ' '.join(msg_parts)
-        await send_dm(client, message.content.split()[1], msg_content)
+        await send_dm(message, client, message.content.split()[1], msg_content)
 
     if message.content.startswith('.!8ball'):
         await eightBall(message)
